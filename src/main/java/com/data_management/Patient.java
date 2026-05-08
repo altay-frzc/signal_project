@@ -13,10 +13,6 @@ public class Patient {
     private int patientId;
     private List<PatientRecord> patientRecords;
 
-    public int getPatientId() {
-        return patientId;
-    }
-
     /**
      * Constructs a new Patient with a specified ID.
      * Initializes an empty list of patient records.
@@ -28,6 +24,9 @@ public class Patient {
         this.patientRecords = new ArrayList<>();
     }
     
+    public int getPatientId() {
+        return patientId;
+    }
     /**
      * Adds a new record to this patient's list of medical records.
      * The record is created with the specified measurement value, record type, and
