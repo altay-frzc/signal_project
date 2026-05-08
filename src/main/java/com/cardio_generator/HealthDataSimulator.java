@@ -143,6 +143,12 @@ public class HealthDataSimulator {
         System.out.println(
                 "  This command simulates data for 100 patients and sends the output to WebSocket clients connected to port 8080.");
     }
+    /**
+    * Builds a simple list of patient IDs from 1 up to the given count.
+    *
+    * @param patientCount how many patients we need IDs for
+    * @return list of patient IDs
+    */
 
     private static List<Integer> initializePatientIds(int patientCount) {
         List<Integer> patientIds = new ArrayList<>();

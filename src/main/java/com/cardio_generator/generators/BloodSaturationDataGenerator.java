@@ -11,6 +11,7 @@ import com.cardio_generator.outputs.OutputStrategy;
  */
 public class BloodSaturationDataGenerator implements PatientDataGenerator {
     private static final Random random = new Random();
+    /** Remembers the last value for each patient so changes are gradual. */
     private int[] lastSaturationValues;
 
      /**
