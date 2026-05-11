@@ -17,7 +17,7 @@ public class AlertStrategyTest {
 
     @BeforeEach
     void setUp() {
-        storage = new DataStorage();
+        storage = DataStorage.getInstance();
     }
 
     @Test
