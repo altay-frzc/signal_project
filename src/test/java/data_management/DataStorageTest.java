@@ -15,7 +15,10 @@ public class DataStorageTest {
     private DataStorage storage;
 
     @BeforeEach
-    void setUp() {
+    void setUp() throws Exception {
+    java.lang.reflect.Field field = DataStorage.class.getDeclaredField("instance");
+    field.setAccessible(true);
+    field.set(null, null);
     storage = DataStorage.getInstance();
 }
     @Test

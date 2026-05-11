@@ -14,10 +14,13 @@ public class AlertGeneratorTest {
     private AlertGenerator alertGenerator;
 
     @BeforeEach
-    void setUp() {
-        storage = DataStorage.getInstance();
-        alertGenerator = new AlertGenerator(storage);
-    }
+    void setUp() throws Exception {
+    java.lang.reflect.Field field = DataStorage.class.getDeclaredField("instance");
+    field.setAccessible(true);
+    field.set(null, null);
+    storage = DataStorage.getInstance();
+    alertGenerator = new AlertGenerator(storage);
+}
 
     @Test
     void testHighSystolicAlert() {
