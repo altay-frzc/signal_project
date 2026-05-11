@@ -1,9 +1,10 @@
+package data_management;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertSame;
 import org.junit.jupiter.api.Test;
 
 import com.cardio_generator.HealthDataSimulator;
 import com.data_management.DataStorage;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 public class SingletonTest {
 
